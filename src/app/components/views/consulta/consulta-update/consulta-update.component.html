@@ -1,0 +1,88 @@
+<form>
+  <h1>Alterar Consula</h1>
+
+  <mat-form-field class="form">
+    <mat-label>Paciente</mat-label>
+    <input
+      matInput
+      [(ngModel)]="consulta.pacienteNome"
+      type="text"
+      name="paciente"
+      required
+      minlength="5"
+      maxlength="100"
+    />
+  </mat-form-field>
+
+  <mat-form-field class="form">
+    <mat-label>Medico</mat-label>
+    <input
+      matInput
+      [(ngModel)]="consulta.medicoNome"
+      type="text"
+      name="medicoNome"
+      required
+      minlength="5"
+      maxlength="100"
+    />
+  </mat-form-field>
+
+  <mat-form-field class="form">
+    <mat-label>Data</mat-label>
+    <input
+      matInput
+      [matDatepicker]="myDataPicker"
+      [min]="minDate"
+      [max]="maxDate"
+      [(ngModel)]="consulta.data"
+      required
+    />
+    <mat-datepicker-toggle
+      [for]="myDataPicker"
+      matSuffix
+    ></mat-datepicker-toggle>
+    <mat-datepicker #myDataPicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field class="form">
+    <mat-label>Hora</mat-label>
+    <input
+      matInput
+      [(ngModel)]="consulta.hora"
+      type="time"
+      name="consultorioNumero"
+      #time
+    />
+  </mat-form-field>
+
+  <mat-form-field class="form">
+    <mat-label>Consultorio</mat-label>
+    <input
+      matInput
+      [(ngModel)]="consulta.consultorioNumero"
+      type="number"
+      name="consultorioNumero"
+      [min]="1"
+      [max]="100"
+    />
+  </mat-form-field>
+
+  <div class="buttons">
+    <button
+      class="mat-elevation-z8"
+      (click)="update()"
+      mat-stroked-button
+      color="primary"
+    >
+      Alterar
+    </button>
+    <button
+      class="mat-elevation-z8"
+      (click)="cancel()"
+      mat-stroked-button
+      color="warn"
+    >
+      Cancelar
+    </button>
+  </div>
+</form>

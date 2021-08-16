@@ -1,0 +1,31 @@
+.content{
+    width: 90%;
+    margin: 1.4rem auto auto;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.tabela{
+    width: 100%;
+}
+
+.delete{
+    color: orangered;
+    margin-left: .5rem;
+}
+
+.edit{
+    color: gold;
+}
+
+.mat-header{
+    width: 5rem;
+}
+
+button{
+    margin-bottom: .8rem;
+    
+}

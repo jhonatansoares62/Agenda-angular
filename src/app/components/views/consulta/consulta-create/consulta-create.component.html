@@ -1,0 +1,80 @@
+<form>
+    <h1>Marcar Consula</h1>
+
+    <mat-form-field class="form">
+      <mat-label>Medicos</mat-label>
+      <mat-select [(ngModel)]="consultaDto.medicoId" name="medicoId">
+        <mat-option *ngFor="let medico of medicos" [value]="medico.id">
+          {{medico.nome}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+      <mat-label>Pacientes</mat-label>
+      <mat-select  [(ngModel)]="consultaDto.pacienteId" name="pacienteId">
+        <mat-option *ngFor="let paciente of pacientes" [value]="paciente.id">
+          {{paciente.nome}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+      <mat-label>Consultorio</mat-label>
+      <mat-select  [(ngModel)]="consultaDto.consultorioId" name="consultorioId">
+        <mat-option *ngFor="let consultorio of consultorios" [value]="consultorio.id">
+          {{consultorio.numero}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+  
+    <mat-form-field class="form">
+      <mat-label>Data</mat-label>
+      <input
+        matInput
+        [matDatepicker]="myDataPicker"
+        [min]="minDate"
+        [max]="maxDate"
+        [(ngModel)]="consultaDto.data"
+        required
+        name="data"
+      />
+      <mat-datepicker-toggle
+        [for]="myDataPicker"
+        matSuffix
+      ></mat-datepicker-toggle>
+      <mat-datepicker #myDataPicker></mat-datepicker>
+    </mat-form-field>
+  
+    <mat-form-field class="form">
+      <mat-label>Hora</mat-label>
+      <input
+        matInput
+        [(ngModel)]="consultaDto.hora"
+        type="time"
+        name="hora"
+        #time
+      />
+    </mat-form-field>
+  
+    <div class="buttons">
+      <button
+        class="mat-elevation-z8"
+        (click)="create()"
+        mat-stroked-button
+        color="primary"
+      >
+        Salvar
+      </button>
+      <button
+        class="mat-elevation-z8"
+        (click)="cancel()"
+        mat-stroked-button
+        color="warn"
+      >
+        Cancelar
+      </button>
+    </div>
+  </form>
+  

@@ -1,0 +1,53 @@
+<form>
+  <h1>Novo Medico</h1>
+  
+  <mat-form-field class="form">
+    <mat-label>Nome</mat-label>
+    <input
+      matInput
+      [(ngModel)]="medico.nome"
+      
+      type="text"
+      name="nome"
+      placeholder="Informe o nome completo"
+    />
+  </mat-form-field>
+
+  <mat-form-field class="form">
+    <mat-label>Nascimento</mat-label>
+    <input
+      matInput
+      [(ngModel)]="medico.dataNascimento"
+      type="text"
+      name="dataNascimento"
+      placeholder="Informe adata de nascimento"
+    />
+  </mat-form-field>
+
+  <mat-form-field class="form">
+    <mat-label>Especialidade</mat-label>
+    <input
+      matInput
+      [(ngModel)]="medico.especialidade"
+      type="text"
+      name="especialidade"
+      placeholder="Informe Especialidade"
+    />
+  </mat-form-field>
+
+  <div class="buttons">
+    <button
+      class="mat-elevation-z8"
+      (click)="create()"
+      mat-stroked-button
+      color="primary"
+    >
+      Criar
+    </button>
+    <button class="mat-elevation-z8" 
+    (click)="cancel()"
+    mat-stroked-button color="warn">
+      Cancelar
+    </button>
+  </div>
+</form>

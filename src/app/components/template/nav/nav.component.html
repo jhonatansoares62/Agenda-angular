@@ -1,0 +1,29 @@
+<mat-sidenav-container class="containner">
+  <mat-sidenav mode="side" opened>
+    <mat-nav-list>
+      <a routerLink="" mat-list-item>
+        <i class="material-icons">home</i>
+        Home
+      </a>
+      <a routerLink="/consultorios" mat-list-item>
+        <i class="material-icons">home</i>
+        Consultorios
+      </a>
+      <a routerLink="/pacientes" mat-list-item>
+        <i class="material-icons">person</i>
+        Pacientes
+      </a>
+      <a routerLink="/medicos" mat-list-item>
+        <i class="material-icons">person</i>
+        Medicos
+      </a>
+      <a routerLink="/consultas" mat-list-item>
+        <i class="material-icons">note</i>
+        Consultas
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

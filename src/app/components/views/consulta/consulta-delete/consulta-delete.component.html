@@ -1,0 +1,99 @@
+<form>
+  <h1>Excluir Consula</h1>
+
+  <mat-form-field class="form">
+    <mat-label>Paciente</mat-label>
+    <input
+      matInput
+      [(ngModel)]="consulta.pacienteNome"
+      type="text"
+      name="paciente"
+      disabled
+    />
+  </mat-form-field>
+
+  <mat-form-field class="form">
+    <mat-label>Especialidade</mat-label>
+    <input
+      matInput
+      [(ngModel)]="consulta.especialidadeMedica"
+      type="text"
+      name="especialidadeMedica"
+      disabled
+    />
+  </mat-form-field>
+
+  <mat-form-field class="form">
+    <mat-label>Medico</mat-label>
+    <input
+      matInput
+      [(ngModel)]="consulta.medicoNome"
+      type="text"
+      name="medicoNome"
+      disabled
+    />
+  </mat-form-field>
+
+  <mat-form-field class="form">
+    <mat-label>CRM</mat-label>
+    <input
+      matInput
+      [(ngModel)]="consulta.medicoCRM"
+      type="text"
+      name="medicoCRM"
+      disabled
+    />
+  </mat-form-field>
+
+  <mat-form-field class="form">
+    <mat-label>Data/Hora</mat-label>
+    <input
+      matInput
+      [(ngModel)]="consulta.data"
+      type="text"
+      name="dataHora"
+      disabled
+    />
+  </mat-form-field>
+
+  <mat-form-field class="form">
+    <mat-label>Hora</mat-label>
+    <input
+      matInput
+      [(ngModel)]="consulta.hora"
+      type="text"
+      name="dataHora"
+      disabled
+    />
+  </mat-form-field>
+
+  <mat-form-field class="form">
+    <mat-label>Consultorio</mat-label>
+    <input
+      matInput
+      [(ngModel)]="consulta.consultorioNumero"
+      type="text"
+      name="consultorioNumero"
+      disabled
+    />
+  </mat-form-field>
+
+  <div class="buttons">
+    <button
+      class="mat-elevation-z8"
+      (click)="delete()"
+      mat-stroked-button
+      color="primary"
+    >
+      Excluir
+    </button>
+    <button
+      class="mat-elevation-z8"
+      (click)="cancel()"
+      mat-stroked-button
+      color="warn"
+    >
+      Cancelar
+    </button>
+  </div>
+</form>
